@@ -35,10 +35,10 @@ public class PrimeFactorization {
             result.add(number);
         }
 
-        System.out.println("Result: ");
-        for (int v : result) {
-            System.out.print(v+" ");
-        }
+        
+       
+           
+       
 
         return result;
 

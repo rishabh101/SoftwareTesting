@@ -7,7 +7,7 @@ public class Logarithm
 		 ;
 		
 	        double log;
-	        log = Math.log10(a)/Math.log10(b);
+	        log = Math.log10(b)/Math.log10(a);
 	        return log;
 	    }
 }

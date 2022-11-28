@@ -1,6 +1,6 @@
 package conversion;
 
-class OctaltoDecimal
+public class Decimaltooctal
 {
 public String DecimalToOctal(int num ) {
         String str = "01234567";

@@ -5,8 +5,8 @@ Misc\leapyear.class
 conversion\anytoany.class
 Maths\Reverse.class
 conversion\BinarytoDecimal.class
+conversion\Decimaltooctal.class
 Misc\NthUglyNumber.class
-Misc\Area.class
 sorting\bubblesort.class
 MainApplication.class
 Maths\MagicSquare.class

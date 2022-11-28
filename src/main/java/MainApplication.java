@@ -5,7 +5,7 @@ import searching.*;
 import sorting.*;
 import conversion.*;
 
-
+import Misc.*;
 
 import java.util.Scanner;
 
@@ -17,14 +17,14 @@ public class MainApplication {
         int ch=0;
         boolean exit = false;
         start_main: while(!exit){
-            System.out.println("Select option:\n1. Math\n2. Search\n3. Sort\n4. Area\n5. Exit");
+            System.out.println("Select option:\n1. Math\n2. Search\n3. Sort\n4. Area\n5. Conversion \n6.Miscellaneous \n7.Exit");
             choice = sc.nextInt();
             ch = 0;
             switch (choice){
-                case 1: System.out.println("Enter choice:\n1. GCD\n2. Prime Factorization\n3. Reverse\n5. Square\n6.Logarithm \n7. Menu ");
+                case 1: System.out.println("Enter choice:\n1. GCD\n2. Prime Factorization\n3. Reverse\n4. Square\n5.Logarithm \n6. Factorial ");
                     ch = sc.nextInt();
                     switch (ch){
-                        case 1: // GCD;
+                        case 1: //gcd
                             System.out.println("Number 1: ");
                             int num1 = sc.nextInt();
                             System.out.println("Number 2: ");
@@ -32,7 +32,7 @@ public class MainApplication {
                             new gcd().calculate(num1,num2);
                             break;
 
-                        case 2: // Area;
+                        case 2: //prime factorization
                         	System.out.println("Enter number: ");
                             int prime_factor = sc.nextInt();
                             PrimeFactorization p1=new PrimeFactorization();
@@ -40,7 +40,7 @@ public class MainApplication {
                             break;
                             
 
-                        case 3: 
+                        case 3: //reverse
                             System.out.println("Enter number ");
                            int p2=sc.nextInt();
                            System.out.println(new Reverse().reverse(p2));
@@ -48,12 +48,28 @@ public class MainApplication {
 
                        
 
-                        case 4: // Prime Factorization;
+                        case 4: //square
                         	System.out.println("Enter number ");
                             int n1=sc.nextInt();
                             System.out.println( new Square().calculate(n1));
                             break;
-                        case 5:
+                        case 5://logarithm
+                        	Scanner input=new Scanner(System.in);
+                   		 System.out.println("Enter base ");
+                   		int b=input.nextInt();
+                   		
+                   		 System.out.println("Enter number of which you want to calculate logarithm");
+                   		
+                   		double a=input.nextInt();
+                   		System.out.println("Logarithm is "+new Logarithm().log(b, a));
+                        	break;
+                        case 6://factorial
+                        	Scanner input1=new Scanner(System.in);
+                        	System.out.println("enter number ");
+                       		int num=input1.nextInt();
+                       		System.out.println("the factorial is "+new Factorial().calculate(num));
+                       		break;
+                        default:
                             continue start_main;
                     }
                     break;
@@ -101,7 +117,7 @@ public class MainApplication {
                         case 1: // Bubble Sort
                             new bubblesort().sort(sort_arr);
                             break;
-                        case 2: // Counting Sort
+                        case 2: // Selection Sort
                             new select().sort2(sort_arr);
                             break;
                         case 3: // Insertion Sort
@@ -113,12 +129,12 @@ public class MainApplication {
                     break;
 
                 
-                case 4:
+                case 4://Area
                 	start: while(!exit){
                 		
                 		System.out.println("Enter the choice\n1.Area for Square \n2.Area of Rectangle\n3.Area of Circle\n4Area of Triangle\5Menu\6exit ");
                 		Scanner sc3=new Scanner(System.in);
-                		int  ch2 = sc3.nextInt();
+                		int  ch2 = sc3.nextInt();//Square
                 		if(ch2==1)
                 		{
                 	       		System.out.println("The Area of Square will be calculated now");
@@ -130,7 +146,7 @@ public class MainApplication {
                 	       	
                         
                          }
-                		else if(ch2==2)
+                		else if(ch2==2)//Rectangle
                 		{
                 			System.out.println("The Area of Rectangle will be calculated now");
                        		System.out.println("Enter length");
@@ -143,7 +159,7 @@ public class MainApplication {
                        	System.out.println("The Area is"+area);
                        	
                 		}
-                		else if(ch2==3)
+                		else if(ch2==3)//Circle
                 		{
                 			System.out.println("The Area of Circle will be calculated now");
                 			double pi=3.14;
@@ -155,7 +171,7 @@ public class MainApplication {
                        	System.out.println("The Area is"+area);
                        
                 		}
-                		else if(ch2==4)
+                		else if(ch2==4)//triangle
                 		{
                 			System.out.println("The Area of Triangle will be calculated now");
                        		System.out.println("Enter base");
@@ -179,23 +195,52 @@ public class MainApplication {
                 		}
                 	}
                 		break;
-                case 5:
-                	Scanner input=new Scanner(System.in);
-           		 System.out.println("Enter base ");
-           		int b=input.nextInt();
-           		
-           		 System.out.println("Enter number of which you want to calculate logarithm");
-           		
-           		double a=input.nextInt();
-           		System.out.println("Logarithm is "+new Logarithm().log(b, a));
-                	break;
-                case 6:
-                	Scanner input1=new Scanner(System.in);
-                	System.out.println("enter number ");
-               		int num=input1.nextInt();
-               		System.out.println("the factorial is "+new Factorial().calculate(num));
+                case 5://Converter
+               		System.out.println("Enter the choice \n1.any2any\n2.BinarytoDecimal\n3.DecimaltoOctal");
+               		Scanner daal=new Scanner(System.in);
+               		int cg=daal.nextInt();
+               		if(cg==1)//anytoany
+               		{
+               			System.out.println("Enter soucenumber");
+               			int sn=daal.nextInt();
+               			System.out.println("Enter soucebase");
+               			int sb=daal.nextInt();
+               			System.out.println("Enter destinationbase");
+               			int db=daal.nextInt();
+               			new anytoany().anyToAny(sn, sb, db);
+               			
+               		}
+               		else if(cg==2)//binarytodecimal
+               		{
+               			System.out.println("Enter binarynumber");
+               			int bn=daal.nextInt();
+               			new BinarytoDecimal().binarytodecimal(bn);
+               		}
+               		else if(cg ==3)//decimaltobinary
+               		{
+               			System.out.println("Enter decimalnumber");
+               			int dn=daal.nextInt();
+               			new Decimaltooctal().DecimalToOctal(dn);
+               		}
                		
-               		
+               		break;
+                 case 6://Miscellaneous
+                	 System.out.println("Enter the choice \n1.Leap year\n2.NthUglyNumber");
+                	 Scanner daal1=new Scanner(System.in);
+                	 int cg1=daal1.nextInt();
+                	 if(cg1==1)//Leap Year
+                	 {
+                		 System.out.println("enter the year");
+                		 int y=daal1.nextInt();
+                		new leapyear().check(y); 
+                	 }
+                	 else if(cg1==2)//Nth Ugly Number
+                	 {
+                		 System.out.println("enter the n value");
+                		 int n=daal1.nextInt();
+                		new NthUglyNumber().calculate(n);
+                	 }
+               		break;
                 case 7: exit = true;
                     break;
                 default: continue start_main;

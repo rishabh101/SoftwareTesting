@@ -6,6 +6,7 @@ public class insert
 	    {
 		  int n = a1.length;
 			if(n==0)
+				
 				return null;
 			for (int i = 1; i < n; ++i) {
 				int key = a1[i];
