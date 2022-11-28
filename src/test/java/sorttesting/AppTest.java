@@ -32,6 +32,7 @@ import Misc.*;
  */
 
 
+
 public class AppTest 
     
 {
@@ -74,22 +75,21 @@ public class AppTest
   
    @DisplayName(value = "Insertion sort")
    @Test
-   public void testApp2()
+   public void testApp1()
    {
    	int test1[] = new int[] {5,9,3,1,2};
        int test2[] = new int[] {1,2,3,5,9};
        assertArrayEquals(test2,i1.sort(test1));
        
       
-       test1 = new int[]{9,5,3,2,1};
-       assertArrayEquals(test2,i1.sort(test1));
+       
        test1 = new int[]{1,2,3,5,9};
        assertArrayEquals(test2,i1.sort(test1));
       
    }
    @Test
    @DisplayName(value = "Selection sort")
-   public void testApp3()
+   public void testApp2()
    {
    	int test1[] = new int[] {5,9,3,1,2};
        int test2[] = new int[] {1,2,3,5,9};
@@ -102,9 +102,10 @@ public class AppTest
        assertArrayEquals(test2,s1.sort2(test1));
        
    }
+   //binary search
    @Test
    @DisplayName("search()=>follows path[1,2,8]")
-   public void testApp4()
+   public void testApp3()
    {
    /*	int test1[] = new int[] {};
    	assertEquals(-1,l2.search(test1,9));
@@ -120,7 +121,7 @@ public class AppTest
    }
    @Test
    @DisplayName("search()=>follows path[1,2,3,4,8]")
-   public void testApp5()
+   public void testApp4()
    {
 	  
    
@@ -129,7 +130,7 @@ public class AppTest
    }
    @Test
    @DisplayName("search()=>follows path[1,2,3,5,7,2,8]")
-   public void testApp6()
+   public void testApp5())
    {
    	int test1[] = new int[] {3,4};
    	assertEquals(-1,l2.search(test1,2));
@@ -137,7 +138,7 @@ public class AppTest
    }
    @Test
    @DisplayName("search()=>follows path[1,2,3,5,6,2,8]")
-   public void testApp7()
+   public void testApp6())
    {
    	int test1[] = new int[] {9,10};
    	assertEquals(-1,l2.search(test1,11));
@@ -145,42 +146,42 @@ public class AppTest
    }
    @Test
    @DisplayName("search()=>follows path[1,2,3,5,7,2,3,5,6,2,8]")
-   public void testApp8()
+   public void testApp7()
    {
 	   int test1[] = new int[] {1,2,3,4,5,6,7};
 	   	assertEquals(2,l2.search(test1,3));
    }
    @Test
    @DisplayName("search()=>follows path[1,2,3,5,6,2,3,5,7,2,8]")
-   public void testApp9()
+   public void testApp8()
    {
 	   int test1[] = new int[] {1,2,3,4,5,6,7};
 	   	assertEquals(4,l2.search(test1,5));
    }
    @Test
    @DisplayName("search()=>follows path[1,2,3,5,7,2,3,5,7,2,8]")
-   public void testApp10()
+   public void testApp9()
    {
 	   int test1[] = new int[] {1,2,3,4,5,6,7};
 	   	assertEquals(0,l2.search(test1,1));
    }
    @Test
    @DisplayName("search()=>follows path[1,2,3,5,6,2,3,5,6,2,8]")
-   public void testApp11()
+   public void testApp10()
    {
 	   int test1[] = new int[] {1,2,3,4,5,6,7};
 	   	assertEquals(6,l2.search(test1,7));
    }
    @Test
    @DisplayName("search()=>follows path[1,2,3,5,6,2,3,4,8]")
-   public void testApp12()
+   public void testApp11()
    {
 	   int test1[] = new int[] {1,2,3,4,5,6,7};
 	   	assertEquals(5,l2.search(test1,6));
    }
    @Test
    @DisplayName("search()=>follows path[1,2,3,5,7,2,3,4,8]")
-   public void testApp13()
+   public void testApp12()
    {
    
    int test1[] = new int[] {1,2,3,4,5,6,7};
@@ -188,7 +189,7 @@ public class AppTest
    }
    @Test
    @DisplayName(value = "Linear Search")
-   public void testApp14()
+   public void testApp13()
    {
    	int test1[] = new int[] {5,9,3,1,2};
    	assertEquals(4,l1.search(test1,2));
@@ -198,68 +199,51 @@ public class AppTest
    }
    @Test
    @DisplayName(value = "g1 follows path[1,2]")
-   public void testApp15(){
+   public void testApp14(){
        assertEquals(-1,g1.calculate(-4,7));
        
        
    }
    @Test
    @DisplayName(value = "g1 follows path[1,3,4,5,10]")
-   public void testApp16(){
+   public void testApp15(){
        assertEquals(8,g1.calculate(0,8));
      
        
    }
    @Test
    @DisplayName(value = "g1 follows path[1,3,4,6,10]")
-   public void testApp17(){
+   public void testApp16(){
        assertEquals(6,g1.calculate(6,0));
        
        
    }
    @Test
    @DisplayName(value = "g1 foloows path[1,3,7,9,7,8,10]")
-   public void testApp18(){
+   public void testApp17(){
        assertEquals(1,g1.calculate(3,4));
        
        
    }
    @Test
    @DisplayName(value = "g1 =>follows path[1,3,7,8,10")
-   public void testApp19(){
+   public void testApp18(){
        assertEquals(4,g1.calculate(4,4));
        
        
    }
    @Test
    @DisplayName(value = "g1=> follows path[1,3,7,9,7,9,7,8,10]")
-   public void testApp20(){
+   public void testApp19(){
        assertEquals(3,g1.calculate(21,15));
       
        
    }
-   @Test
-   @DisplayName(value = "Prime Factorization")
-   public void testApp21(){
-   	
-	    List<Integer>l1=new ArrayList();
-	    	l1.add(23);
-	    	assertEquals(l1,p1.calculate(529));
-	    	l1.clear();
-	    	l1.add(7);
-	        assertEquals(l1,p1.calculate(343));
-	        l1.clear();
-	        
-	        l1.add(3);
-	        
-	        assertEquals(l1,p1.calculate(27));
-	        
-	    	
-	    }
+   
    
    @Test
    @DisplayName(value="reverse=> follows path[1,2,1,3]")
-   public void testApp22(){
+   public void testApp20(){
    	
    	assertEquals(5,r1.reverse(5));
       ;
@@ -267,7 +251,7 @@ public class AppTest
    
    @Test
    @DisplayName(value = "reverse =>follows path[1,2,1,2,1,3]")
-   public void testApp23(){
+   public void testApp21(){
    	
    	assertEquals(32,r1.reverse(23));
        
@@ -275,74 +259,89 @@ public class AppTest
 
 @Test
 @DisplayName(value = "Square")
-public void testApp24(){
+public void testApp22(){
     assertEquals(4,s2.calculate(2));
     assertEquals(9,s2.calculate(3));
     
     assertEquals(0,s2.calculate(0));
     
 }
-
+@DisplayName(value = "Insertion sort")
+@Test
+public void testApp23()
+{
+	
+    int test2[] = new int[] {1,2,3,5,9};
+   
+    
+   
+   int  test1[] = new int[]{9,5,3,2,1};
+    assertArrayEquals(test2,i1.sort(test1));
+    
+   
+}
 @Test
 @DisplayName(value = "anytoany follows path[1,3,1,2,5,2,4]")
-public void testApp25()
+public void testApp24()
 {
 	assertEquals(2,a2.anyToAny(10,2,4));
     
 }
 @DisplayName(value = "binarytodecimal")
 @Test
-public void testApp26(){
+public void testApp25(){
     assertEquals(4,bd.binarytodecimal(100));
     assertNotEquals(4,bd.binarytodecimal(10));
     assertEquals(0,bd.binarytodecimal(0));
 }
+// leap year
 @Test
 @DisplayName(value = "lp follows path [1,2,3,6,8,9,11]")
-public void testApp27(){
+public void testApp26(){
 	 assertEquals(true,lp.check(1600));
     
 }
 @Test
 @DisplayName(value = "lp follows path[1,2,3,7,8,9,11]")
-public void testApp28(){
+public void testApp27(){
 	 assertEquals(false,lp.check(1700));
     
 }
 @Test
 @DisplayName(value = "lp follows path[1,2,4,8,10,11]")
-public void testApp29(){
+public void testApp28(){
 	 assertEquals(true,lp.check(2004));
     
 }
 @Test
 @DisplayName(value = "lp follows path[1,5,8,10,11")
-public void testApp30(){
+public void testApp29(){
 	 assertEquals(false,lp.check(2001));
     
 }
+//NUglynumber
 @Test
 @DisplayName(value = "N1 follows path[1,3]")
-public void testApp31(){
+public void testApp30(){
     assertEquals(1,n1.calculate(1));
     
 }
 @Test
 @DisplayName(value = "N1 follows path[1,2,4,5,7,1,3]")
-public void testApp32(){
+public void testApp31(){
     assertEquals(2,n1.calculate(2));
   
 }
 @Test
 @DisplayName(value = "N1 follows path[1,2,4,5,7,1,2,5,6,7,1,3]")
-public void testApp33(){
+public void testApp32(){
     assertEquals(3,n1.calculate(3));
 }
 
     
 @Test
 @DisplayName(value = "Magic Square")
-public void testApp34(){
+public void testApp33(){
     int [][] arr1 = {{2,7,6},{9,5,1},{4,3,8}};
     assertTrue(Arrays.deepEquals(arr1, m1.magicsquare(3)));
     assertFalse(Arrays.deepEquals(arr1,m1.magicsquare(2)));
@@ -350,8 +349,9 @@ public void testApp34(){
     assertNotNull(m1.magicsquare(5));
 }
 @Test
+//Bubblesort
 @DisplayName(value = "sort()=>follows path[1,2,9]")
- public void testApp35()
+ public void testApp34()
  {
  	int test1[] = new int[] {};
      int test2[] = new int[] {};
@@ -360,7 +360,7 @@ public void testApp34(){
  }
 @Test
 @DisplayName(value = "sort()=>follows path[1,2,3,4,5,4,7,8,9]")
- public void testApp36()
+ public void testApp35()
  {
  	int test1[] = new int[] {1,2};
      int test2[] = new int[] {1,2};
@@ -369,7 +369,7 @@ public void testApp34(){
  }
 @Test
 @DisplayName(value = "sort()=>follows path[1,2,3,4,5,6,4,5,4,5,4,7,2,3,4,5,4,7,8,9]")
- public void testApp37()
+ public void testApp36()
  {
  	int test1[] = new int[] {2,1,3};
      int test2[] = new int[] {1,2,3};
@@ -379,7 +379,7 @@ public void testApp34(){
 //prime factorization
 @Test
 @DisplayName(value = "p1 follows path[1,2,3,4,1,5,7,12,13,12,14]")
-public void testApp38(){
+public void testApp37(){
 	
 	    List<Integer>l1=new ArrayList();
 	    	l1.add(2);
@@ -391,7 +391,7 @@ public void testApp38(){
 
 @Test
 @DisplayName(value = "p1 follows[1,2,3,4,1,5,6,5,7,9,12,13,12,14]")
-public void testApp39(){
+public void testApp38(){
 	
 	    List<Integer>l1=new ArrayList();
 	    	l1.add(2);
@@ -403,7 +403,7 @@ public void testApp39(){
 	    }
 @Test
 @DisplayName(value = "p1 follows path [1,5,6,8,10,11,6,5,7,12,13,12,14]")
-public void testApp40(){
+public void testApp39(){
 	
 	    List<Integer>l1=new ArrayList();
 	    	l1.add(3);
@@ -414,7 +414,7 @@ public void testApp40(){
 	    }
 @Test
 @DisplayName(value = "p1 follows path[1,5,6,8,10,11,6,5,7,12,14")
-public void testApp41(){
+public void testApp40(){
 	
 	    List<Integer>l1=new ArrayList();
 	    	l1.add(3);

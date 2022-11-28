@@ -3,6 +3,7 @@ package conversion;
 // This class converts a Binary number to a Decimal number
 
 
+
 public class BinarytoDecimal {
 
     public int binarytodecimal(int binNum) {

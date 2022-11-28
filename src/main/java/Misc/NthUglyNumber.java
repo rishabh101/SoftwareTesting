@@ -1,6 +1,7 @@
 package Misc;
 //calculating the nth ugly number
 
+
 public class NthUglyNumber {
 
     public long calculate(int number){
