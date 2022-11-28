@@ -4,6 +4,7 @@ package conversion;
 // number.
 // sn ,sb,db ---> ()dn  .   this is what we have to do    .
 
+
 public class anytoany {
 
     public int anyToAny(int sn, int sb, int db) {

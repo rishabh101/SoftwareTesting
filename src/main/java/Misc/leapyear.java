@@ -1,14 +1,15 @@
 package Misc;
-
+//Checking whether the year is leap or not
 public class leapyear {
 
-    public boolean check(int year){
+    public boolean check(int y){
 
         boolean flag = false;
 
-        if (year % 4 == 0) {
-            if (year % 100 == 0) {
-                if (year % 400 == 0)
+        if (y % 4 == 0) {
+        	
+            if (y % 100 == 0) {
+                if (y % 400 == 0)
                     flag = true;
                 else
                     flag = false;
@@ -22,9 +23,9 @@ public class leapyear {
 
         System.out.println("Result: ");
         if (!flag)
-            System.out.println(year + " : Non Leap-year");
+            System.out.println(y + " : Non Leap-year");
         else
-            System.out.println(year + " : Leap-year");
+            System.out.println(y + " : Leap-year");
 
         return flag;
     }

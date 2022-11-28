@@ -31,6 +31,7 @@ import Misc.*;
  * Unit test for simple App.
  */
 
+
 public class AppTest 
     
 {
@@ -200,7 +201,7 @@ public void testApp12(){
 }
 @Test
 @DisplayName(value = "Nth Ugly Number")
-public void nthUglyNumberTest(){
+public void testApp13(){
     assertEquals(8,n1.calculate(7));
     assertNotEquals(7,n1.calculate(7));
     assertEquals(9,n1.calculate(8));
@@ -210,11 +211,12 @@ public void nthUglyNumberTest(){
 }
 @Test
 @DisplayName(value = "Magic Square")
-public void magicSquareTest(){
+public void testApp14(){
     int [][] arr1 = {{2,7,6},{9,5,1},{4,3,8}};
     assertTrue(Arrays.deepEquals(arr1, m1.magicsquare(3)));
     assertFalse(Arrays.deepEquals(arr1,m1.magicsquare(2)));
     assertNull(m1.magicsquare(0));
     assertNotNull(m1.magicsquare(5));
 }
+
 }

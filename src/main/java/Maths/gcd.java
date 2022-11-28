@@ -3,10 +3,10 @@ package Maths;
 
 
 // This class calculates the GCD of 2 numbers
-
 public class gcd {
 
 
+	
     public int calculate(int n1,int n2)  {
 
         int answer=0;

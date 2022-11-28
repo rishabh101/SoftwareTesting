@@ -3,6 +3,7 @@ package Maths;
 
 import java.util.*;
 
+
 public class PrimeFactorization {
 
     public List<Integer> calculate(int number){

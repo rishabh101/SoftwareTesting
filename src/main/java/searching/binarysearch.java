@@ -2,6 +2,7 @@ package searching;
 
 
 
+
 public class binarysearch
 {
 	

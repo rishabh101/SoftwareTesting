@@ -1,8 +1,10 @@
 
 import Maths.*;
+
 import searching.*;
 import sorting.*;
 import conversion.*;
+
 
 
 import java.util.Scanner;
@@ -15,11 +17,11 @@ public class MainApplication {
         int ch=0;
         boolean exit = false;
         start_main: while(!exit){
-            System.out.println("Select option:\n1. Math\n2. Search\n3. Sort\n4. Exit");
+            System.out.println("Select option:\n1. Math\n2. Search\n3. Sort\n4. Area\n5. Exit");
             choice = sc.nextInt();
             ch = 0;
             switch (choice){
-                case 1: System.out.println("Enter choice:\n1. GCD\n2. Prime Factorization\n3. Reverse\n5. Square\n6. Menu ");
+                case 1: System.out.println("Enter choice:\n1. GCD\n2. Prime Factorization\n3. Reverse\n5. Square\n6.Logarithm \n7. Menu ");
                     ch = sc.nextInt();
                     switch (ch){
                         case 1: // GCD;
@@ -111,8 +113,90 @@ public class MainApplication {
                     break;
 
                 
-
-                case 4: exit = true;
+                case 4:
+                	start: while(!exit){
+                		
+                		System.out.println("Enter the choice\n1.Area for Square \n2.Area of Rectangle\n3.Area of Circle\n4Area of Triangle\5Menu\6exit ");
+                		Scanner sc3=new Scanner(System.in);
+                		int  ch2 = sc3.nextInt();
+                		if(ch2==1)
+                		{
+                	       		System.out.println("The Area of Square will be calculated now");
+                	       		System.out.println("Enter length");
+                	       		Scanner sc1=new Scanner(System.in);
+                	       		double ch1=sc1.nextDouble();
+                	       	   double area=ch1*ch1;
+                	       	System.out.println("The Area is"+area);
+                	       	
+                        
+                         }
+                		else if(ch2==2)
+                		{
+                			System.out.println("The Area of Rectangle will be calculated now");
+                       		System.out.println("Enter length");
+                       		Scanner sc1=new Scanner(System.in);
+                       		System.out.println("Enter breadth");
+                       		Scanner sc2=new Scanner(System.in);
+                       		double l=sc1.nextDouble();
+                       		double b=sc2.nextDouble();
+                       	   double area=l*b;
+                       	System.out.println("The Area is"+area);
+                       	
+                		}
+                		else if(ch2==3)
+                		{
+                			System.out.println("The Area of Circle will be calculated now");
+                			double pi=3.14;
+                       		System.out.println("Enter radius");
+                       		Scanner sc1=new Scanner(System.in);
+                       		
+                       		double r=sc1.nextInt();
+                       	   double area=pi*r;
+                       	System.out.println("The Area is"+area);
+                       
+                		}
+                		else if(ch2==4)
+                		{
+                			System.out.println("The Area of Triangle will be calculated now");
+                       		System.out.println("Enter base");
+                       		Scanner sc1=new Scanner(System.in);
+                       		double b1=sc1.nextInt();
+                       		System.out.println("Enter height");
+                       		Scanner sc2=new Scanner(System.in);
+                       		double h1=sc2.nextInt();
+                       	   double area= b1*h1*0.5;
+                       	   
+                       	System.out.println("The Area is"+area);
+                       	
+                		}
+                		else if(ch2==5)
+                		{
+                			continue start;
+                		}
+                		else
+                		{
+                			 exit = true;
+                		}
+                	}
+                		break;
+                case 5:
+                	Scanner input=new Scanner(System.in);
+           		 System.out.println("Enter base ");
+           		int b=input.nextInt();
+           		
+           		 System.out.println("Enter number of which you want to calculate logarithm");
+           		
+           		double a=input.nextInt();
+           		System.out.println("Logarithm is "+new Logarithm().log(b, a));
+                	break;
+                case 6:
+                	Scanner input1=new Scanner(System.in);
+                	System.out.println("enter number ");
+               		int num=input1.nextInt();
+               		System.out.println("the factorial is "+new Factorial().calculate(num));
+               		
+               		
+                case 7: exit = true;
                     break;
                 default: continue start_main;
             }

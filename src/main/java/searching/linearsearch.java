@@ -3,6 +3,7 @@ package searching;
 
 
 
+
 public class linearsearch
 {
 	public int search(int find[], int element)

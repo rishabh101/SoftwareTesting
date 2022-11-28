@@ -1,4 +1,5 @@
 package sorting;
+
 public class insert
 {
 	  public int[] sort(int a1[])

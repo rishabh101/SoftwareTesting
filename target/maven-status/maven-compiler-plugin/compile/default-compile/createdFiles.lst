@@ -1,10 +1,12 @@
 Maths\Square.class
 Maths\gcd.class
+Maths\Logarithm.class
 Misc\leapyear.class
 conversion\anytoany.class
 Maths\Reverse.class
 conversion\BinarytoDecimal.class
 Misc\NthUglyNumber.class
+Misc\Area.class
 sorting\bubblesort.class
 MainApplication.class
 Maths\MagicSquare.class
@@ -12,4 +14,6 @@ searching\linearsearch.class
 searching\binarysearch.class
 Maths\PrimeFactorization.class
 sorting\insert.class
+Maths\rotate.class
+Maths\Factorial.class
 sorting\select.class

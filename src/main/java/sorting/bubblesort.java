@@ -5,6 +5,11 @@ package sorting;
  *
  */
 
+
+/*
+ * the program does sorting by using the bubblesort algorithm
+ */
+
 public class bubblesort 
 {
 	int temp;
